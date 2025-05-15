@@ -26,7 +26,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="container mx-auto grid grid-cols-2">
+    <div className="container mx-auto grid grid-cols-2 relative">
       <figure>
         <Image
           src={!isDark ? "/icons/logo-light.png" : "/icons/logo-dark.png"}
@@ -75,7 +75,7 @@ const Nav = () => {
         id="mobile-sidebar"
         aria-label="Sidebar navigation"
         className={`fixed top-0 right-0 h-screen z-50 bg-white dark:bg-black shadow dark:shadow-white transition-transform duration-500 transform md:hidden 
-    ${openSideNav ? "translate-x-0" : "translate-x-full"} min-w-xs `}
+    ${openSideNav ? "translate-x-0" : "translate-x-full"} max-w-xs w-full`}
       >
         {/* Close button */}
         <button

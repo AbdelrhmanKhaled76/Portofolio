@@ -10,11 +10,6 @@ html {
   transition: all 200m;
 }
 
-body {
-  position: relative;
-  overflow-x: hidden;
-}
-
 .text-gradient {
   background: linear-gradient(95.28deg, #9c83ff 57.09%, #ff9051 87.74%);
   -webkit-background-clip: text;

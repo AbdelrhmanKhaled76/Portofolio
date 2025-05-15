@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -7,11 +7,12 @@ import dynamic from "next/dynamic";
 
 config.autoAddCss = false;
 
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: "device-width",
+};
+
 export const metadata: Metadata = {
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
   title: "Abdelrhman Khaled's Portfolio",
   description:
     "Explore the portfolio of Abdelrhman Khaled, a full-stack developer skilled in React, Next.js, Tailwind CSS, Angular, and clean code practices. This site showcases frontend and backend projects, emphasizing performance, design, and RESTful API integration.",
@@ -50,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-white text-black dark:bg-black dark:text-white  relative`}
+        className={`antialiased bg-white text-black dark:bg-black dark:text-white relative overflow-x-hidden`}
       >
         <Nav />
         {children}
