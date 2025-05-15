@@ -75,7 +75,7 @@ const Nav = () => {
         id="mobile-sidebar"
         aria-label="Sidebar navigation"
         className={`fixed top-0 right-0 h-screen z-50 bg-white dark:bg-black shadow dark:shadow-white transition-transform duration-500 transform md:hidden 
-    ${openSideNav ? "translate-x-0" : "translate-x-full"} max-w-xs w-full`}
+    ${openSideNav ? "translate-x-0" : "translate-x-full"} min-w-xs `}
       >
         {/* Close button */}
         <button
@@ -96,20 +96,6 @@ const Nav = () => {
             type="button"
             title="Toggle dark mode"
             aria-label={isDark ? "Turn off dark mode" : "Turn on dark mode"}
-            className="cursor-pointer w-10 h-10 rounded-full mx-auto bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white dark:hover:text-black transition-colors duration-500"
-            onClick={toggleTheme}
-          >
-            <FontAwesomeIcon icon={faMoon} />
-          </button>
-        </div>
-        <div className="flex justify-between flex-col mt-15 px-3 w-full text-center  gap-4">
-          <Button href="#about-me" isDark={true} value={"About me"} />
-          <Button href="#experience" isDark={true} value={"Experience"} />
-          <Button href="#other-skills" isDark={false} value={"skills"} />
-          <button
-            title="dark mood"
-            aria-label={isDark ? "turn off dark mode" : "turn on dark mode"}
-            type="button"
             className="cursor-pointer w-10 h-10 rounded-full mx-auto bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white dark:hover:text-black transition-colors duration-500"
             onClick={toggleTheme}
           >
