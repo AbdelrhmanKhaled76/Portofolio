@@ -72,7 +72,7 @@ const Nav = () => {
       <aside
         aria-label="side nav"
         className={`fixed top-0 right-0 h-screen z-50 bg-white dark:bg-black shadow dark:shadow-white transition-transform duration-500 transform md:hidden 
-    ${openSideNav ? "translate-x-0" : "translate-x-full"} w-full max-w-xs`}
+    ${openSideNav ? "translate-x-0" : "translate-x-full"}  max-w-xs`}
       >
         <button
           title={openSideNav ? "close sidebar" : "sidebar closed"}
