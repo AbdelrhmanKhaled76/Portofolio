@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Button from "../ui/button";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,22 +7,21 @@ import {
   faMoon,
   faSquareXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import darkPic from "../../public/icons/logo-dark.png";
-import lightPic from "../../public/icons/logo-light.png";
+import dynamic from "next/dynamic";
 const Nav = () => {
+  const Button = dynamic(() => import("../ui/button"), {
+    ssr: false,
+  });
   const [isDark, setIsDark] = useState(false);
   const [openSideNav, setOpenSideNav] = useState<boolean>(false);
-  const sideNav = useRef(null);
   // Detect theme on mount
   useEffect(() => {
-    const html = document.documentElement;
-    const isDarkMode = html.classList.contains("dark");
+    const isDarkMode = document.documentElement.classList.contains("dark");
     setIsDark(isDarkMode);
   }, []);
 
   const toggleTheme = (): void => {
-    const html = document.documentElement;
-    html.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
     setIsDark(!isDark);
   };
 
@@ -31,7 +29,7 @@ const Nav = () => {
     <div className="container mx-auto grid grid-cols-2">
       <figure>
         <Image
-          src={!isDark ? lightPic : darkPic}
+          src={!isDark ? "/icons/logo-light.png" : "/icons/logo-dark.png"}
           alt="logo"
           width={100}
           height={100}

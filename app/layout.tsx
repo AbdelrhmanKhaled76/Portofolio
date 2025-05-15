@@ -26,14 +26,12 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Abdelrhman Khaled",
-      url: "https://your-website.com", // Optional, replace with your real URL
     },
   ],
   icons: {
-    icon: "/logo-light.png",
+    icon: "/icons/logo.png",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

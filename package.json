@@ -20,6 +20,7 @@
     "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.3.2",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/aos": "^3.0.7",
