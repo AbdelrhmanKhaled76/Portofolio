@@ -8,6 +8,10 @@ import dynamic from "next/dynamic";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   title: "Abdelrhman Khaled's Portfolio",
   description:
     "Explore the portfolio of Abdelrhman Khaled, a full-stack developer skilled in React, Next.js, Tailwind CSS, Angular, and clean code practices. This site showcases frontend and backend projects, emphasizing performance, design, and RESTful API integration.",
