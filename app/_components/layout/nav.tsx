@@ -37,13 +37,17 @@ const Nav = () => {
         />
       </figure>
 
-      <nav className="ms-auto flex justify-between items-center py-5 px-3">
+      <nav
+        aria-label="main nav"
+        className="ms-auto flex justify-between items-center py-5 px-3"
+      >
         <div className="md:flex justify-between items-center gap-4 hidden">
           <Button href="#basics-i-know" isDark={true} value={"Basics"} />
           <Button href="#experience" isDark={true} value={"Experience"} />
           <Button href="#other-skills" isDark={false} value={"skills"} />
           <button
             title="dark mood"
+            aria-label={isDark ? "turn off dark mode" : "turn on dark mode"}
             type="button"
             className="cursor-pointer w-10 h-10 rounded-full bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white dark:hover:text-black transition-colors duration-500"
             onClick={toggleTheme}
@@ -57,7 +61,8 @@ const Nav = () => {
           }}
           className="block md:hidden cursor-pointer"
           type="button"
-          title="side nav"
+          title="side nav opener"
+          aria-label={openSideNav ? "sidebar opened" : "open sidebar"}
         >
           <FontAwesomeIcon icon={faEllipsis} className="text-2xl" />
         </button>
@@ -65,12 +70,13 @@ const Nav = () => {
 
       {/* Always mounted, just animated */}
       <aside
+        aria-label="side nav"
         className={`dark:bg-black fixed top-0 right-0 w-48 h-screen z-50 bg-white shadow dark:shadow-white transition-transform duration-500 transform md:hidden ${
           openSideNav ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
-          title="close side bar"
+          title={openSideNav ? "close sidebar" : "sidebar closed"}
           type="button"
           onClick={() => {
             setOpenSideNav(false);
@@ -85,6 +91,7 @@ const Nav = () => {
           <Button href="#other-skills" isDark={false} value={"skills"} />
           <button
             title="dark mood"
+            aria-label={isDark ? "turn off dark mode" : "turn on dark mode"}
             type="button"
             className="cursor-pointer w-10 h-10 rounded-full mx-auto bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white dark:hover:text-black transition-colors duration-500"
             onClick={toggleTheme}
