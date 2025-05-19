@@ -8,8 +8,10 @@ import dynamic from "next/dynamic";
 config.autoAddCss = false;
 
 export const viewport: Viewport = {
-  initialScale: 1,
   width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export const metadata: Metadata = {
