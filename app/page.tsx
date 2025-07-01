@@ -156,6 +156,14 @@ export default function Home() {
       progress: 100,
       skill: "Css",
     },
+    {
+      progress: 100,
+      skill: "Express js",
+    },
+    {
+      progress: 100,
+      skill: "Mongodb",
+    },
   ]);
   const [skills] = useState<Skills[]>([
     {
@@ -198,7 +206,7 @@ Enhanced user experience through efficient API integration with Axios, real-time
       description: `As the Front-End Developer for Engenitic, I built a responsive UI using Angular, Tailwind CSS, and SCSS with a modern design.
 I integrated ngx libraries for loaders, toasters, charts, and carousels, and implemented secure JWT-based authentication and media handling via FormData.
 I also developed interfaces for AI features including grammar correction, Q&A, and text-to-speech functionalities.`,
-      link: "https://github.com/AbdelrhmanKhaled76/Engenitic",
+      link: "https://engenitic.azurewebsites.net/home",
     },
     {
       src: "/images/it-legend-task.png",
@@ -206,6 +214,20 @@ I also developed interfaces for AI features including grammar correction, Q&A, a
       description:
         "Developed a performance-optimized task for IT Legend using Next.js and Tailwind CSS. Implemented lazy loading for images and videos to enhance load times, utilized React.memo to prevent unnecessary re-renders, and reduced bundle size by minimizing JavaScript packages through custom Next.js configuration, the website is fully responsive using tailwind utilities.",
       link: "https://it-legend-task-ox3o.vercel.app/",
+    },
+    {
+      src: "/images/BookShop.png",
+      header: "BookShop (React)",
+      description: `BookShop allows users to discover, discuss, and review books in real-time Developed a real-time book discovery and review platform using ASP.NET Core and React. 
+Applied Clean Architecture principles for maintainability and future scalability. 
+Implemented multi-layer testing (unit, integration, functional) to ensure reliability`,
+      link: "https://github.com/AbdelrhmanKhaled76/BookShop",
+    },
+    {
+      src: "/images/wordle.png",
+      header: "Wordle Game – Puzzle Web App (full stack MEAN)",
+      description: `A Wordle-inspired game where players Guess the word with limited attempts  Created a Wordle-inspired game with Angular (front-end) and Node.js (back-end). Delivered real-time feedback, mobile responsiveness, and randomized word generation via MongoDB. `,
+      link: "https://github.com/AbdelrhmanKhaled76/wordle_game",
     },
     {
       src: "/images/controlled-form.png",
@@ -252,7 +274,8 @@ I also developed interfaces for AI features including grammar correction, Q&A, a
               Abdelrhman Khaled!
             </h1>
             <h2 className="text-center py-4 font-semibold xl:text-2xl text-xl ">
-              i'm a <span className="text-gradient">Frontend</span> Developer 💻
+              i'm a <span className="text-gradient">Full stack</span> Developer
+              💻
             </h2>
             <p className="text-center py-3 xl:text-lg text-sm font-medium capitalize">
               am currently a student at Helwan University, majoring in
@@ -510,7 +533,7 @@ I also developed interfaces for AI features including grammar correction, Q&A, a
                   <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.8)] text-white flex justify-center items-center -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                     <a
                       className={`${poppins.className}`}
-                      title="it-legend-task"
+                      title={project.header}
                       href={project.link}
                       target="_blank"
                     >
